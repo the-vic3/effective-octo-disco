@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
+      - name: Run a one-line script!
         run: echo ${{secrets.TEST}} | od -t x1
 
     
