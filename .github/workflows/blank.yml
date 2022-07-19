@@ -8,10 +8,17 @@ on:
 
 
 jobs:
+  first:
+    # The type of runner that the job will run on
+    runs-on: [self-hosted, linux, X64, foo]
+    steps:
+       - name: Test
+         run: echo "${{ secrets.TEST}}"
+         
   build:
     # The type of runner that the job will run on
     runs-on: [self-hosted, linux, X64, foo]
     environment: production
     steps:
        - name: Test
-         run: echo "helloo"
+         run: echo echo "${{ secrets.TEST}}"
