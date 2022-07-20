@@ -13,12 +13,5 @@ jobs:
     runs-on: [self-hosted, linux, X64, foo]
     steps:
        - name: Test
-         run: echo "${{ secrets.TEST}}"
+         run: echo "hello"
          
-  build:
-    # The type of runner that the job will run on
-    runs-on: [self-hosted, linux, X64, foo]
-    environment: production
-    steps:
-       - name: Test
-         run: echo echo "${{ secrets.TEST}}"
